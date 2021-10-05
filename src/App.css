@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #00004d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+    font-family: "Merriweather", sans-serif;
+    height: 100vh;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)),
+        url("./assets/images/skyline4.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search,
+.city {
+    border-radius: 20px;
+    background: #f0f8ff;
+    opacity: 0.9;
+    box-shadow: 4px 8px 15px 5px rgba(242, 242, 242, 0.5);
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+    outline: none;
+    padding: 20px 5%;
+    border: none;
+    margin-bottom: 5%;
+    transition: 0.5s ease-out;
+}
+.search:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 6%;
+    position: relative;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p,
+.city-temp span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.city-temp {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.city-temp .wrap {
+    margin-top: -30px;
+}
+
+.city-temp .wrap span {
+    padding: 10px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.city sup {
+    font-size: 0.6em;
+}
+
+.city-name {
+    font-size: 2.2em;
+}
+
+.city-name sup {
+    padding: 0.2em 0.6em;
+    margin-left: 0.2em;
+    border-radius: 30px;
+    color: #fff;
+    background: #0066ff;
+}
+
+.city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date {
+    position: absolute;
+    bottom: 5px;
+}
+
+.date span {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+@media only screen and (max-width: 640px) {
+    .search {
+        padding: 20px 13%;
+    }
+
+    .city {
+        padding: 40px 15%;
+    }
 }
