@@ -1,136 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
 
 :root {
-    --primary-color: #00004d;
+  --primary-color: #f0f8ff;
+  --secondary-color: #00004d;
+  --box-shadow: 4px 8px 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 html,
 body {
-    font-family: "Merriweather", sans-serif;
-    height: 100vh;
-    margin: 0;
+  font-family: "Merriweather", sans-serif;
+  height: 100vh;
+  margin: 0;
 }
 
 .main-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)),
-        url("./assets/images/skyline4.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.search,
-.city {
-    border-radius: 20px;
-    background: #f0f8ff;
-    opacity: 0.9;
-    box-shadow: 4px 8px 15px 5px rgba(242, 242, 242, 0.5);
-    cursor: pointer;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)),
+    url("./assets/images/bg-image.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .search {
-    outline: none;
-    padding: 20px 5%;
-    border: none;
-    margin-bottom: 5%;
-    transition: 0.5s ease-out;
+  border-radius: 10px;
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.search {
+  width: 30%;
+  outline: none;
+  padding: 20px 5%;
+  border: none;
+  margin-bottom: 5%;
+  transition: transform 0.3s ease-out;
 }
 .search:hover {
-    transform: scale(1.02);
-    opacity: 0.8;
+  transform: scale(1.02);
 }
 
 .city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px 6%;
-    position: relative;
+  background: transparent;
+  color: var(--primary-color);
+  border: transparent;
+  box-shadow: var(--box-shadow);
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 6%;
+  position: relative;
+  width: 30%;
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 p,
 .city-temp span {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .city-temp {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .city-temp .wrap {
-    margin-top: -30px;
+  margin-top: -30px;
 }
 
 .city-temp .wrap span {
-    padding: 10px;
-    font-weight: 700;
-    color: var(--primary-color);
+  padding: 10px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .city sup {
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 
 .city-name {
-    font-size: 2.2em;
+  font-size: 2.2em;
 }
 
 .city-name sup {
-    padding: 0.2em 0.6em;
-    margin-left: 0.2em;
-    border-radius: 30px;
-    color: #fff;
-    background: #0066ff;
+  padding: 0.2em 0.6em;
+  margin-left: 0.2em;
+  border-radius: 30px;
+  color: var(--primary-color);
+  background: #0066ff;
 }
 
 .city-icon {
-    margin-top: 10px;
-    width: 100px;
-    height: 100px;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  color: var(--primary-color);
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .date {
-    position: absolute;
-    bottom: 5px;
+  position: absolute;
+  bottom: 8px;
 }
 
 .date span {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--primary-color);
+  opacity: 0.7;
 }
 
 @media only screen and (max-width: 640px) {
-    .search {
-        padding: 20px 18%;
-    }
+  .search,
+  .city {
+    /* padding: 20px 18%; */
+    width: 80%;
+  }
 
-    .city {
-        padding: 40px 15%;
-    }
+  /* .city {
+    padding: 40px 15%;
+  } */
 }
