@@ -1,12 +1,14 @@
+import React from "react";
+import Content from "./Content";
 import DateTime from "./DateTime";
 
 const WeatherContainer = ({ query, setQuery, search, weather }) => {
   return (
-    <div className="main-container">
+    <div className="container">
       <input
         type="text"
         className="search"
-        placeholder="Search city weather"
+        placeholder="Search your city weather"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
@@ -17,28 +19,7 @@ const WeatherContainer = ({ query, setQuery, search, weather }) => {
             <span>{weather.name}</span>
             <sup>{weather.sys.country}</sup>
           </h2>
-          <div className="city-temp">
-            {Math.round(weather.main.temp)}
-            <sup>&deg;C</sup>
-            <div className="wrap">
-              <span>
-                MIN:{weather.main.temp_min}
-                <sup>&deg;C</sup>
-              </span>
-              <span>
-                MAX:{weather.main.temp_max}
-                <sup>&deg;C</sup>
-              </span>
-            </div>
-          </div>
-          <div className="info">
-            <img
-              className="city-icon"
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt={weather.weather[0].description}
-            />
-            <p>{weather.weather[0].description}</p>
-          </div>
+          <Content weather={weather} />
           <DateTime />
         </div>
       )}
