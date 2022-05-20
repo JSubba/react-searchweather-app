@@ -23,17 +23,17 @@ const WeatherContainer = ({ query, setQuery, search, weather }) => {
         >
           <path
             d="M29.8594 29.8594L39.4219 39.4219"
-            stroke="#f77307"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke="#08c7d1"
+            strokeWidth="4.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M17.9062 33.0469C26.2682 33.0469 33.0469 26.2682 33.0469 17.9062C33.0469 9.54431 26.2682 2.76562 17.9062 2.76562C9.54431 2.76562 2.76562 9.54431 2.76562 17.9062C2.76562 26.2682 9.54431 33.0469 17.9062 33.0469Z"
-            stroke="#f74504"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke="#08c7d1"
+            strokeWidth="4.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
