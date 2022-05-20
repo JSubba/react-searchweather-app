@@ -5,14 +5,38 @@ import DateTime from "./DateTime";
 const WeatherContainer = ({ query, setQuery, search, weather }) => {
   return (
     <div className="container">
-      <input
-        type="text"
-        className="search"
-        placeholder="Search your city weather"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={search}
-      />
+      <div className="search-box">
+        <input
+          type="text"
+          className="search"
+          placeholder="Search your city weather"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyPress={search}
+        />
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 42 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M29.8594 29.8594L39.4219 39.4219"
+            stroke="#f77307"
+            stroke-width="4.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M17.9062 33.0469C26.2682 33.0469 33.0469 26.2682 33.0469 17.9062C33.0469 9.54431 26.2682 2.76562 17.9062 2.76562C9.54431 2.76562 2.76562 9.54431 2.76562 17.9062C2.76562 26.2682 9.54431 33.0469 17.9062 33.0469Z"
+            stroke="#f74504"
+            stroke-width="4.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
       {weather.main && (
         <div className="city">
           <h2 className="city-name">
